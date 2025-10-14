@@ -3,8 +3,10 @@ use std::{
     io::{self, Read},
 };
 
-use crate::memory::Memory;
-mod memory;
+use crate::cpu::Memory;
+
+mod cpu;
+mod instructions;
 
 fn read_file_bytes(path: &str) -> io::Result<Vec<u8>> {
     let mut f = File::open(path)?;
