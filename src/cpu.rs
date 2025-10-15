@@ -112,12 +112,12 @@ impl Memory {
     }
 
     pub fn read_u16(&self, address: u16) -> u16 {
-        ((self.read_u8(address) as u16) << 8) + (self.read_u8(address) as u16)
+        ((self.read_u8(address) as u16) << 8) + (self.read_u8(address + 1) as u16)
     }
 
     pub fn write_u16(&mut self, address: u16, val: u16) {
         self.write_u8(address, (val >> 8) as u8);
-        self.write_u8(address, (val & 0xFF) as u8)
+        self.write_u8(address + 1, (val & 0xFF) as u8)
     }
 }
 
