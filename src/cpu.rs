@@ -279,7 +279,6 @@ impl Cpu {
     pub fn load_next_u8(&mut self) -> u8 {
         let result = self.memory.read_u8(self.register.pc);
         self.register.pc += 1;
-        dbg!(result);
         result
     }
 
@@ -313,7 +312,6 @@ impl Cpu {
 
     pub fn write_address(&mut self, address: AddressType, val: u8) {
         let address = self.get_address_by(address);
-        dbg!(address);
         self.memory.write_u8(address, val);
     }
 

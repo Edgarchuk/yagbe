@@ -51,7 +51,6 @@ mod test_instrations {
         cpu.memory.write_u8(0x100, 11);
         cpu.register.write_u8(RegisterU8Label::L, 1);
         cpu.memory.write_u16(0x101, 0x100);
-        dbg!(cpu.memory.read_u16(0x101));
         cpu.register.pc = 0x101;
         ld(
             &mut cpu,
