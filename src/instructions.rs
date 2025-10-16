@@ -99,7 +99,7 @@ fn pop(cpu: &mut Cpu, args: [Argument; 1]) {
     }
 }
 
-mod test_push_instrution {
+mod test_push_pop_instrution {
     use crate::cpu::Memory;
 
     use super::*;

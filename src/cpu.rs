@@ -163,6 +163,13 @@ pub enum RegisterU16Label {
     PC,
 }
 
+pub enum RegisterFlags {
+    Z,
+    N,
+    H,
+    C,
+}
+
 impl Register {
     fn new() -> Self {
         Self {
